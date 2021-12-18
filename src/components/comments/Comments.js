@@ -38,16 +38,19 @@ const Comments = () => {
     );
   }
 
-  if (status === "completed" && loadedComments && loadedComments.length > 0) {
-    comments = <CommentsList comments={loadedComments} />;
-  }
+  // if (status === "completed" && loadedComments && loadedComments.length > 0) {
+  //   comments = <CommentsList comments={loadedComments} />;
+  // }
 
-  if (
-    status === "completed" &&
-    (!loadedComments || loadedComments.length === 0)
-  ) {
+  if (status === "completed") {
     comments = <p className="centered">No comments were added yet!</p>;
   }
+  // if (
+  //   status === "completed" &&
+  //   (!loadedComments || loadedComments.length === 0)
+  // ) {
+  //   comments = <p className="centered">No comments were added yet!</p>;
+  // }
 
   return (
     <section className={classes.comments}>

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams, Outlet } from "react-router-dom";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
@@ -48,10 +48,10 @@ const QuoteDetail = () => {
   //   return <p>No quote found!</p>;
   // }
   return (
-    <Fragment>
+    <>
       <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
       <Outlet />
-    </Fragment>
+    </>
   );
 };
 
