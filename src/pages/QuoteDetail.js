@@ -49,7 +49,7 @@ const QuoteDetail = () => {
   // }
   return (
     <>
-      <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
+      {/* <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} /> */}
       <Outlet />
     </>
   );
