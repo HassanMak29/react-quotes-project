@@ -2,13 +2,12 @@ import { Route, Routes, Navigate, Link } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import React, { Suspense } from "react";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
-import Comments from "./components/comments/Comments";
 
 const NewQuote = React.lazy(() => import("./pages/NewQuote"));
 const AllQuotes = React.lazy(() => import("./pages/AllQuotes"));
 const QuoteDetail = React.lazy(() => import("./pages/QuoteDetail"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
-// const Comments = React.lazy(() => import("./components/comments/Comments"));
+const Comments = React.lazy(() => import("./components/comments/Comments"));
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
               path=""
               element={
                 <div className="centered">
-                  <Link className="btn--flat" to="comments">
+                  <Link className="btn--flat" to="/comments">
                     Load Comments
                   </Link>
                 </div>
