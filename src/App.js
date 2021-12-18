@@ -27,13 +27,13 @@ function App() {
               path=""
               element={
                 <div className="centered">
-                  <Link className="btn--flat" to="/comments">
+                  <Link className="btn--flat" to={`comments`}>
                     Load Comments
                   </Link>
                 </div>
               }
             />
-            <Route path="/comments" element={<Comments />} />
+            <Route path={`comments`} element={<Comments />} />
           </Route>
           <Route path="/new-quote" element={<NewQuote />} />
           <Route path="*" element={<NotFound />} />
