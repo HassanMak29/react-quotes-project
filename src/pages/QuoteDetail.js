@@ -1,5 +1,5 @@
-import React, { useEffect, Outlet } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Outlet } from "react-router-dom";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 import useHttp from "../hooks/use-http";

@@ -25,9 +25,13 @@ const QuoteList = (props) => {
   const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
 
   const changeSortingHandler = () => {
-    navigate(location.pathname, {
-      search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
-    });
+    navigate(
+      `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
+    );
+    // navigate(location.pathname, {
+    //   search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
+    // });
+    console.log(location.pathname);
 
     // history.push(
     //   `${location.pathname}?sort=${isSortingAscending ? "desc" : "asc"}`
@@ -38,7 +42,7 @@ const QuoteList = (props) => {
     <Fragment>
       <div className={classes.sorting}>
         <button onClick={changeSortingHandler}>
-          Sort {isSortingAscending ? "Descending" : "Ascendong"}
+          Sort {isSortingAscending ? "Descending" : "Ascending"}
         </button>
       </div>
       <ul className={classes.list}>

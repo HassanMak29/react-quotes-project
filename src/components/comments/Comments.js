@@ -48,7 +48,7 @@ const Comments = () => {
   ) {
     comments = <p className="centered">No comments were added yet!</p>;
   }
-  console.log(comments);
+
   return (
     <section className={classes.comments}>
       <h2>User Comments</h2>
