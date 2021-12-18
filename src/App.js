@@ -33,7 +33,7 @@ function App() {
                 </div>
               }
             />
-            <Route path="comments" element={<Comments />} />
+            <Route path="/comments" element={<Comments />} />
           </Route>
           <Route path="/new-quote" element={<NewQuote />} />
           <Route path="*" element={<NotFound />} />
