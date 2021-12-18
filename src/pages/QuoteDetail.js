@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useParams, Outlet } from "react-router-dom";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
-import Comments from "../components/comments/Comments";
 
 // const DUMMY_QUOTES = [
 //   { id: "q1", author: "Max", text: "Learning React is Fun" },
@@ -49,10 +48,10 @@ const QuoteDetail = () => {
   //   return <p>No quote found!</p>;
   // }
   return (
-    <>
+    <Fragment>
       <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
-      <Comments />
-    </>
+      <Outlet />
+    </Fragment>
   );
 };
 
